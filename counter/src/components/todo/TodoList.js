@@ -2,6 +2,7 @@ import { Button } from 'react-bootstrap'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import {TodoDeleteAlert} from './TodoDeleteAlert';
+import {TodoEditAlert} from './TodoEditAlert';
 
 export default function TodoList() {
 
@@ -25,7 +26,7 @@ export default function TodoList() {
                             <tr key={i.toString()}>
                             <td>{i}</td>
                             <td>{item}</td>
-                            <td><Button variant="info">Update</Button> <Button onClick={()=>{TodoDeleteAlert(i)}} variant="danger">Delete</Button></td>
+                            <td><Button onClick={()=>{TodoEditAlert(i,item)}} variant="info">Update</Button> <Button onClick={()=>{TodoDeleteAlert(i)}} variant="danger">Delete</Button></td>
                             </tr>
                         )
                     }
