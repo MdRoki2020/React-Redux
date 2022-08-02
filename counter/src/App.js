@@ -1,11 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import CounterPage from './pages/CounterPage';
 
 function App() {
   return (
-    <div className="App">
-      <Button className='btn btn-danger'>Counter</Button>
+    <div className="">
+      <CounterPage />
     </div>
   );
 }
